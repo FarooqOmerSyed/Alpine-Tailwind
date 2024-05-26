@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>recipe - card</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+</head>
+
+<body>
+    <div class="flex h-screen flex-col items-center justify-center bg-pink-100">
+        <!-- image header -->
+        <div class="rounded-lg bg-white shadow-2xl shadow-pink-400">
+            <img class="h-44 w-full rounded-t-lg"
+                src="https://images.unsplash.com/photo-1490645935967-10de6ba17061?q=80&w=2053&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="recipe" />
+
+            <!-- main titles -->
+            <div class="p-6 text-center">
+                <h1 class="font-semibold uppercase text-gray-700">Subscribe today</h1>
+                <p class="-mb-3 mt-2 text-3xl font-semibold">Never miss a recipe</p>
+            </div>
+            <!-- form submit -->
+            <form class="-mt-3 grid gap-1 p-6" action="">
+                <input class="w-full border border-pink-400 px-4 py-2 focus:outline-none" type="text"
+                    placeholder="Your Email Address" /> <br />
+                <button class="w-full bg-pink-400 px-4 py-2 font-semibold text-white">subscribe</button>
+            </form>
+
+            <!-- attention -->
+            <div class="-mt-1 mb-6 text-center text-gray-700">
+                <p>we won't send you spam.</p>
+                <p>unsubscribe at any time.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>modal</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body x-data="{ showModal: false }">
+    <button
+      @click="showModal = true"
+      class="px-4 py-2 bg-blue-400 text-white font-bold"
+    >
+      Open Modal
+    </button>
+
+    <div
+      x-show="showModal"
+      @click.away="showModal = false"
+      class="fixed top-0 left-0 right-0 bottom-0 bg-gray-500 bg-opacity-50 flex items-center justify-center"
+    >
+      <div class="bg-white p-8 rounded-lg">
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sit nesciunt
+          neque ullam impedit quos, ipsa cupiditate tempore aliquam ut velit?
+        </p>
+        <button
+          @click="showModal = false"
+          class="mt-4 bg-red-400 px-4 py-2 text-white font-bold"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

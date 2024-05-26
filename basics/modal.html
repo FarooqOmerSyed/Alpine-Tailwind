@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Modal</title>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gray-500 min-h-screen flex items-center justify-center">
+    <!-- alpine component -->
+    <div
+      x-data="{ showModal: false }"
+      class="relative w-1/2 max-w-md mx-auto bg-white rounded shadow-md"
+    >
+      <button
+        class="px-4 py-2 rounded-lg bg-white font-semibold relative text-gray-800 hover:text-gray-600"
+        @click="showModal =!showModal"
+      >
+        Show Modal
+      </button>
+      <div
+        x-show="showModal"
+        x-transition:enter="ease-in-out duration-300"
+        x-transition:enter-start="opacity-0 scale-75"
+        x-transition:enter-end="opacity-100 scale-100"
+        x-transition:leave="ease-in-out duration-300"
+        x-transition:leave-start="opacity-100 scale-100"
+        x-transition:leave-end="opacity-0 scale-75"
+        @click.away="showModal = false"
+        class="absolute top-0 left-0 px-4 py-2 bg-white rounded-md shadow-md z-10"
+      >
+        <!-- modal content -->
+        <h2 class="text-lg font-bold mb-2">Modal Title</h2>
+        <p class="text-gray-600 text-sm mb-4">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed sit amet
+          nulla auctor, vestibulum magna sed, convallis ex.
+        </p>
+        <button
+          @click="showModal = false"
+          class="px-4 py-2 rounded-lg bg-white font-semibold text-blue-500 hover:text-blue-600"
+        >
+          Close
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

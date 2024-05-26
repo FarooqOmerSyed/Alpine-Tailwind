@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>dropdown</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"
+    ></script>
+  </head>
+  <body class="bg-blue-400 min-h-screen flex items-center justify-center">
+    <div x-data="{ show: false }">
+      <button
+        class="px-4 py-2 bg-white font-semibold rounded-lg"
+        @click="show = !show"
+      >
+        dropdown
+      </button>
+      <div class="space-y-4 mt-4" x-show="show">
+        <ul
+          class="px-4 py-2 bg-white opacity-50 space-y-4 divide-y-2 text-center"
+        >
+          <li>concentrate</li>
+          <li>rehearse</li>
+          <li>focus</li>
+          <li>practice</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
