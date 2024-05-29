@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile-New</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body>
+    <div class="flex h-screen items-center justify-center bg-purple-300">
+        <!-- outer component -->
+        <div class="relative h-[30rem] w-56 rounded-2xl bg-blue-950"></div>
+        <div class="absolute">
+            <div
+                class="relative flex h-96 w-[18rem] items-center justify-center overflow-hidden rounded-2xl bg-white p-6">
+                <!-- blurry balls -->
+                <div class="absolute right-0 top-0 h-32 w-32 rounded-full bg-green-800 blur-[70px]"></div>
+                <div class="absolute bottom-0 left-0 h-32 w-32 rounded-full bg-yellow-800 blur-[70px]"></div>
+                <!-- blurry balls  -->
+                <div class="absolute flex flex-col items-center justify-center">
+                    <!-- img -->
+                    <div><img class="h-32 w-32 rounded-full bg-pink-400"
+                            src="https://tailwindcss.com/img/erin-lindford.jpg" alt="" /></div>
+
+                    <!-- text area -->
+                    <div class="mt-9 text-center">
+                        <h1 class="font-semibold tracking-wide text-blue-950">Erin Lindford</h1>
+                        <p class="text-blue-950">Software Engineer</p>
+                    </div>
+
+                    <div class="mt-9">
+                        <button class="rounded-full bg-blue-950 px-6 py-2 text-white">View</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
