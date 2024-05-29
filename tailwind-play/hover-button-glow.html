@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>hover-button-glow</title>
+    <style>
+        .boxshadow:hover {
+            box-shadow: 0 0 5px #03e9f4,
+                0 0 25px #03e9f4,
+                0 0 50px #03e9f4,
+                0 0 100px #03e9f4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="bg-gray-800 flex h-screen items-center justify-center">
+        <a class="uppercase leading-loose tracking-wider border-2 border-[#03e9f4] text-[#03e9f4] px-6 py-2 hover:boxshadow hover:text-white hover:bg-[#03e9f4] boxshadow rounded-lg font-semibold"
+            href="#">button</a>
+    </div>
+</body>
+
+</html>
