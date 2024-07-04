@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>confirm-Download</title>
+</head>
+
+<body>
+    <div class="p-4 w-[18rem] mx-auto container border-2 mt-16 rounded-xl border-green-100 shadow-2xl">
+        <div class="flex flex-col items-center">
+            <!--  -->
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                stroke="currentColor" class="size-11 bg-sky-100 p-1 rounded-full">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                    d="M3 16.5v2.25A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75V16.5M16.5 12 12 16.5m0 0L7.5 12m4.5 4.5V3" />
+            </svg>
+
+            <!--  -->
+            <h1 class="mt-3 text-xl font-semibold">Confirm Download</h1>
+            <p class="mt-2 text-gray-700">Your about to download 'invoice.pdf.', if you wish to proceed please click
+                confirm</p>
+            <div class="flex space-x-2 mt-3 w-full">
+                <button class="px-4 py-2 border-2 rounded-lg w-full font-semibold">Cancel</button>
+                <button
+                    class="px-4 py-2 border-2 rounded-lg bg-blue-700 text-white w-full font-semibold">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
