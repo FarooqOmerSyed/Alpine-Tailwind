@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Modal</title>
+</head>
+
+<body>
+    <dialog id="dialog" class="w-[20rem] rounded-md bg-blue-600 px-4 py-2">
+        <form class="transition-transform duration-300" method="dialog">
+            <button type="submit" class="mt-2 rounded-full px-1 py-1">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                    stroke="currentColor" class="size-8 fill-red-500">
+                    <path stroke-linecap="round" stroke-linejoin="round"
+                        d="m9.75 9.75 4.5 4.5m0-4.5-4.5 4.5M21 12a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z" />
+                </svg>
+            </button>
+            <h2 class="mb-4 mt-3 font-mono font-semibold text-white">Lorem ipsum dolor sit amet consectetur adipisicing
+                elit. Assumenda saepe ad totam consequatur ex? Ipsam at odit qui dignissimos quas.</h2>
+        </form>
+    </dialog>
+    <div class="flex items-center justify-center">
+        <button class="m-16 rounded-md bg-green-400 px-4 py-1 font-semibold"
+            onClick='document.getElementById("dialog").showModal();'>Open Modal</button>
+    </div>
+</body>
+
+</html>
