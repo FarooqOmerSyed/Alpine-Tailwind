@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <title>Reddit</title>
+</head>
+
+<body>
+    <div x-data="{ open: false}" class="bg-slate-800 p-4 w-[20rem] mx-auto rounded-md text-white mt-16">
+        <!-- header -->
+        <div class="flex items-center justify-between">
+            <h1 class="text-xl font-semibold">r/fatestaynight</h1>
+            <button class="bg-blue-600 rounded-full px-4 h-9">Join</button>
+        </div>
+        <h1 class="text-md font-semibold">Fate/Stay Night</h1>
+        <p x-show="!open" class="line-clamp-3">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero
+            laboriosam fuga beatae vero voluptatum impedit explicabo quis voluptatem
+            quo ipsa.
+        </p>
+        <p x-show="open">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum debitis
+            deleniti praesentium blanditiis omnis, amet reprehenderit, id placeat
+            officia minima nemo ut perferendis est aut eaque accusamus!
+            Necessitatibus, placeat officia?
+        </p>
+        <button @click="open = !open" x-show="!open"
+            class="w-full hover:bg-gray-600 mt-2 py-2 rounded-full text-blue-600">
+            Show more
+        </button>
+        <div class="flex gap-20 mt-3">
+            <div>
+                <h1 class="font-semibold">191k</h1>
+                <h2 class="text-gray-300">Members</h2>
+            </div>
+            <div>
+                <h1 class="font-semibold">540</h1>
+                <h2 class="flex items-center gap-2 justify-center text-gray-300">
+                    <span>
+                        <div class="size-2 fill-green-600">
+                            <svg clip-rule="evenodd" fill-rule="evenodd" stroke-linejoin="round" stroke-miterlimit="2"
+                                viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                <circle cx="11.998" cy="11.998" fill-rule="nonzero" r="9.998" />
+                            </svg>
+                        </div>
+                    </span>
+                    Online
+                </h2>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
