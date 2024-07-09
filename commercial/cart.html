@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Cart</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"></script>
+  </head>
+  <body>
+    <div
+      x-data="{ price: 0.24, count: 1 }"
+      class="flex max-w-sm mx-auto border-2 m-16 relative justify-between items-center p-4"
+    >
+      <p class="absolute bottom-0 top-2 bg-green-400 h-6 px-2 left-2">
+        Price: $<span x-text="price.toFixed(2)"></span>
+      </p>
+      <div>
+        <img
+          class="h-32 w-32 object-cover"
+          src="https://plus.unsplash.com/premium_photo-1681414728888-c2360c8852f6?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Banana"
+        />
+      </div>
+      <button @click="count++">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="size-6 fill-green-400"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25ZM12.75 9a.75.75 0 0 0-1.5 0v2.25H9a.75.75 0 0 0 0 1.5h2.25V15a.75.75 0 0 0 1.5 0v-2.25H15a.75.75 0 0 0 0-1.5h-2.25V9Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <span x-text="count"></span>
+      <button @click="count > 1 ? count-- : count = 1">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          viewBox="0 0 24 24"
+          fill="currentColor"
+          class="size-6 fill-red-500"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm3 10.5a.75.75 0 0 0 0-1.5H9a.75.75 0 0 0 0 1.5h6Z"
+            clip-rule="evenodd"
+          />
+        </svg>
+      </button>
+      <div class="absolute bottom-0 right-6">
+        <p>
+          Total: $<span
+            class="text-lg font-semibold"
+            x-text="(price * count).toFixed(2)"
+          ></span>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
