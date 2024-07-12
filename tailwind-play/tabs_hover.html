@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Tabs</title>
+</head>
+
+<body x-cloak>
+    <div x-data="{ aboutOpen: true, contactOpen: false, servicesOpen: false }" class="max-w-2xl mx-auto container m-20">
+        <!-- tab headers -->
+        <div class="bg-blue-300 flex justify-between px-4 py-2 rounded-full">
+            <a class="hover:bg-blue-600 px-4 py-2 rounded-full hover:text-white hover:font-semibold" href="#"
+                @click="aboutOpen = true; contactOpen = false; servicesOpen = false">About</a>
+            <a class="hover:bg-blue-600 px-4 py-2 rounded-full hover:text-white hover:font-semibold" href="#"
+                @click="contactOpen = true; aboutOpen = false; servicesOpen = false">Contact</a>
+            <a class="hover:bg-blue-600 px-4 py-2 rounded-full hover:text-white hover:font-semibold" href="#"
+                @click="servicesOpen = true; aboutOpen = false; contactOpen = false">Services</a>
+        </div>
+        <!-- tab details -->
+        <div class="mt-4 rounded-lg border-4 p-2" x-show="aboutOpen">
+            <h1 class="font-bold text-xl">tab box 1 - ABOUT</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum architecto aperiam sunt aspernatur nobis
+                assumenda suscipit quidem placeat dolore unde pariatur et, maxime voluptas. Beatae eaque itaque
+                architecto doloribus nulla.</p>
+        </div>
+        <div class="mt-4 rounded-lg border-4 p-2" x-show="contactOpen">
+            <h1 class="font-bold text-xl">tab box 2 - CONTACT</h1>
+            <p>Contact us at contact@example.com for any inquiries.</p>
+        </div>
+        <div class="mt-4 rounded-lg border-4 p-2" x-show="servicesOpen">
+            <h1 class="font-bold text-xl">tab box 3 - SERVICES</h1>
+            <p>Explore our wide range of services tailored to meet your needs.</p>
+        </div>
+    </div>
+</body>
+
+</html>
