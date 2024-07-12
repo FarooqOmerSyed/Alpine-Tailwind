@@ -21,17 +21,17 @@
                 @click="servicesOpen = true; aboutOpen = false; contactOpen = false">Services</a>
         </div>
         <!-- tab details -->
-        <div class="mt-4 rounded-lg border-4 p-2" x-show="aboutOpen">
+        <div class="mt-4 rounded-lg border-4 p-2 transition-transform duration-500" x-show="aboutOpen" x-transition>
             <h1 class="font-bold text-xl">tab box 1 - ABOUT</h1>
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum architecto aperiam sunt aspernatur nobis
                 assumenda suscipit quidem placeat dolore unde pariatur et, maxime voluptas. Beatae eaque itaque
                 architecto doloribus nulla.</p>
         </div>
-        <div class="mt-4 rounded-lg border-4 p-2" x-show="contactOpen">
+        <div class="mt-4 rounded-lg border-4 p-2 transition-transform duration-500" x-show="contactOpen" x-transition>
             <h1 class="font-bold text-xl">tab box 2 - CONTACT</h1>
             <p>Contact us at contact@example.com for any inquiries.</p>
         </div>
-        <div class="mt-4 rounded-lg border-4 p-2" x-show="servicesOpen">
+        <div class="mt-4 rounded-lg border-4 p-2 transition-transform duration-500" x-show="servicesOpen" x-transition>
             <h1 class="font-bold text-xl">tab box 3 - SERVICES</h1>
             <p>Explore our wide range of services tailored to meet your needs.</p>
         </div>
