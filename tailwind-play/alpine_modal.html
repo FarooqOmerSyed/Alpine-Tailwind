@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Modal_Alpine</title>
+</head>
+
+<body>
+    <div x-data class="mx-auto container p-4 text-center">
+        <dialog x-ref="dialog" class="p-6 rounded-lg max-w-md relative">
+            <form method="dialog">
+                <button class="px-4 py-2 fill-red-500 text-white font-thin  absolute top-0 right-0 mt-2"><svg
+                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"
+                        class="size-6 fill-red-500">
+                        <path fill-rule="evenodd"
+                            d="M12 2.25c-5.385 0-9.75 4.365-9.75 9.75s4.365 9.75 9.75 9.75 9.75-4.365 9.75-9.75S17.385 2.25 12 2.25Zm-1.72 6.97a.75.75 0 1 0-1.06 1.06L10.94 12l-1.72 1.72a.75.75 0 1 0 1.06 1.06L12 13.06l1.72 1.72a.75.75 0 1 0 1.06-1.06L13.06 12l1.72-1.72a.75.75 0 1 0-1.06-1.06L12 10.94l-1.72-1.72Z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </button>
+            </form>
+            <h2 class="text-xl font-thin tracking-tight mt-3">this is modal built with html dialog element and alpine
+                ref and
+                magic element $refs with dialog method
+                showModal(); </h2>
+        </dialog>
+        <button @click="$refs.dialog.showModal();"
+            class="px-4 bg-blue-400 py-2 rounded-md text-white font-bold tracking-tighter text-2xl">open
+            modal</button>
+    </div>
+</body>
+
+</html>
