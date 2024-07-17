@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>ransom</title>
+    <style>
+        @keyframes blinkCursor {
+            50% {
+                border-right-color: bg-green-500;
+            }
+        }
+
+        @keyframes typeAndDelete {
+
+            0%,
+            40% {
+                width: 0;
+            }
+
+            45%,
+            55% {
+                width: 11.4em;
+            }
+
+            /* adjust width based on content */
+            90%,
+            100% {
+                width: 0;
+            }
+        }
+
+        p {
+            animation: typeAndDelete 6s steps(11) infinite,
+                blinkCursor 0.9s step-end infinite alternate;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="p-2 max-w-sm mx-auto">
+        <div class="h-8 bg-gray-500 flex items-center justify-between px-4">
+            <div class="flex space-x-2">
+                <div class="w-4 h-4 bg-red-600 rounded-full"></div>
+                <div class="w-4 h-4 bg-yellow-300 rounded-full"></div>
+                <div class="w-4 h-4 bg-green-500 rounded-full"></div>
+            </div>
+            <div class="text-white font-semibold font-mono">Status</div>
+        </div>
+        <div class="bg-black flex items-center justify-center p-6">
+            <div class=" m-16 text-white max-w-sm">
+                <p
+                    class="bg-clip-text text-transparent bg-green-600 flex font-bold tracking-tighter font-mono text-nowrap">
+                    You Have Been HACKED!... <span class="float-right">|</span> </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
