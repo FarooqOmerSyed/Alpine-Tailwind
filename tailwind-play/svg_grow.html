@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>grow_svg</title>
+</head>
+
+<body>
+    <div class="flex h-screen items-center justify-center">
+        <div
+            class="absolute top-0 mt-14 uppercase font-bold sm:text-7xl text-4xl bg-clip-text text-transparent bg-gradient-to-b from-violet-600 to-pink-300">
+            Growing SVG </div>
+        <div class="z-50 mx-4 container border-2 p-4 max-w-md bg-violet-500/20 rounded-lg">
+            <p class="font-semibold text-slate-800 tracking-tighter">Lorem ipsum dolor sit amet consectetur, adipisicing
+                elit. Quod quis dolores nemo aliquid id accusamus quisquam officia ipsum esse voluptatibus dignissimos
+                cupiditate aspernatur, iure aliquam commodi, deserunt asperiores neque ut, sit amet. Quam ducimus
+                molestias minus, molestiae odit laudantium cupiditate sit est omnis facilis praesentium maxime cumque
+                esse iste sunt.</p>
+        </div>
+    </div>
+
+    <div class="absolute bottom-0 z-10 w-screen">
+        <svg width="100%" height="100%" id="svg" viewBox="0 0 1440 590" xmlns="http://www.w3.org/2000/svg"
+            class="transition delay-150 duration-300 ease-in-out">
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+                    <stop offset="5%" stop-color="#F78DA7"></stop>
+                    <stop offset="95%" stop-color="#8ED1FC"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M 0,600 L 0,150 C 106.48803827751198,113.42583732057416 212.97607655502395,76.85167464114832 295,78 C 377.02392344497605,79.14832535885168 434.5837320574162,118.01913875598086 536,128 C 637.4162679425838,137.98086124401914 782.6889952153111,119.07177033492823 903,105 C 1023.3110047846889,90.92822966507177 1118.6602870813394,81.69377990430621 1204,90 C 1289.3397129186606,98.30622009569379 1364.6698564593303,124.1531100478469 1440,150 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="0.53"
+                class="path-0 transition-all delay-150 duration-300 ease-in-out"></path>
+            <defs>
+                <linearGradient id="gradient" x1="0%" y1="50%" x2="100%" y2="50%">
+                    <stop offset="5%" stop-color="#F78DA7"></stop>
+                    <stop offset="95%" stop-color="#8ED1FC"></stop>
+                </linearGradient>
+            </defs>
+            <path
+                d="M 0,600 L 0,350 C 80.04784688995215,338.688995215311 160.0956937799043,327.377990430622 256,322 C 351.9043062200957,316.622009569378 463.66507177033486,317.177033492823 570,341 C 676.3349282296651,364.822966507177 777.244019138756,411.9138755980862 875,398 C 972.755980861244,384.0861244019138 1067.3588516746413,309.1674641148325 1161,291 C 1254.6411483253587,272.8325358851675 1347.3205741626793,311.4162679425838 1440,350 L 1440,600 L 0,600 Z"
+                stroke="none" stroke-width="0" fill="url(#gradient)" fill-opacity="1"
+                class="path-1 transition-all delay-150 duration-300 ease-in-out"></path>
+        </svg>
+    </div>
+
+</body>
+
+</html>
