@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Cubic-Bezier</title>
+</head>
+
+<body>
+    <div class="flex h-screen items-center justify-center">
+        <div class="flex gap-2">
+            <div class="h-44 w-32 bg-green-400 item"></div>
+            <div class="h-44 w-32 bg-blue-400 item"></div>
+            <div class="h-44 w-32 bg-yellow-400 item"></div>
+            <div class="h-44 w-32 bg-purple-400 item"></div>
+        </div>
+    </div>
+
+    <style>
+        .item {
+            transition: 0.5s cubic-bezier(.87, -1.38, .03, 1.54)
+        }
+
+        .item:hover {
+            width: 12rem;
+        }
+    </style>
+</body>
+
+</html>
