@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>word_carousel</title>
+</head>
+
+<body>
+    <div class="flex items-center justify-center h-screen">
+        <div>
+            <h1 class="text-2xl font-bold">Iam a </h1>
+        </div>
+    </div>
+
+    <style>
+        h1:after {
+            content: "";
+            animation: 6s swap infinite;
+            color: white;
+            background: blue;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 2rem
+        }
+
+        @keyframes swap {
+
+            0% {
+                content: "developer"
+            }
+
+            25% {
+                content: "engineer"
+            }
+
+            50% {
+                content: "coder"
+            }
+
+            75% {
+                content: "designer"
+            }
+
+            100% {
+                content: "developer"
+            }
+
+        }
+    </style>
+</body>
+
+</html>
