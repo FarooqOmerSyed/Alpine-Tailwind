@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>linktree_repica</title>
+</head>
+
+<body class="p-2">
+    <section class="text-center flex items-center justify-center flex-col mt-9">
+        <h2 class="w-56 h-56 bg-yellow-300 rounded-full flex items-center justify-center ring-2 ring-black">image </h2>
+        <h1 class="mt-6 text-4xl font-bold tracking-tighter">Software Engineer</h1>
+    </section>
+
+    <section class="text-center flex flex-col items-center justify-center space-y-7 mt-9">
+        <div class="left_right cursor-pointer rounded-full border-2 border-black p-6 text-center sm:max-w-2xl w-full">
+            <p>Subscribe youtube Channel</p>
+        </div>
+
+        <div class="left_right cursor-pointer rounded-full border-2 border-black p-6 text-center sm:max-w-2xl w-full">
+            <p>Follow me on Instagram</p>
+        </div>
+        <div class="left_right cursor-pointer rounded-full border-2 border-black p-6 text-center sm:max-w-2xl w-full">
+            <p>this is some text, on hover it sould shake</p>
+        </div>
+        <div class="left_right cursor-pointer rounded-full border-2 border-black p-6 text-center sm:max-w-2xl w-full">
+            <p>follow me on twitter</p>
+        </div>
+        <div class="left_right cursor-pointer rounded-full border-2 border-black p-6 text-center sm:max-w-2xl w-full">
+            <p>download my e-book</p>
+        </div>
+    </section>
+
+    <style>
+        @keyframes shake {
+            0% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            50% {
+                transform: translateX(5px);
+            }
+
+            75% {
+                transform: translateX(-5px);
+            }
+
+            100% {
+                transform: translateX(0);
+            }
+        }
+
+
+        div {
+            box-shadow: 5px 5px;
+
+        }
+
+        .left_right:hover {
+            animation: shake 1s linear infinite
+        }
+    </style>
+
+</body>
+
+</html>
