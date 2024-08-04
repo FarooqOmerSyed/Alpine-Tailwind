@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>hover_grayscale</title>
+</head>
+
+<body>
+    <div class="flex h-screen items-center justify-center">
+        <!-- container -->
+        <div class="box flex gap-2">
+            <h1 class="item h-32 w-44 bg-green-400 hover:scale-110 transition-transform"></h1>
+            <h1 class="item h-32 w-44 bg-blue-400 hover:scale-110 transition-transform"></h1>
+            <h1 class="item h-32 w-44 bg-yellow-400 hover:scale-110 transition-transform"></h1>
+        </div>
+    </div>
+
+    <style>
+        .box:hover .item:not(:hover) {
+            filter: grayscale(1) blur(10px);
+        }
+    </style>
+
+</body>
+
+</html>
