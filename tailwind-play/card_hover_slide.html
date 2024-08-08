@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>card_hover_slide</title>
+</head>
+
+<body>
+    <div class="flex h-screen items-center justify-center bg-gray-200">
+        <div class="group relative h-80 w-64 overflow-hidden border-2 border-black bg-blue-500">
+            <div
+                class="absolute bottom-0 h-44 w-64 transform translate-y-full bg-green-500 transition-transform duration-500 group-hover:translate-y-0 p-2">
+                <h1 class="text-xl font-semibold">Hover Card Slide</h1>
+                <p>the green div, initailly set to hidden by <span class="bg-red-400">transform
+                        translate-y-full</span>class, later to view it back use <span
+                        class="bg-red-400">group-hover:translate-y-0</span></p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
