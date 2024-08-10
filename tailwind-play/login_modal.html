@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <header class="flex justify-between p-4 shadow-2xl">
+        <div class="font-bold">logo</div>
+        <div>
+            <button class="rounded-full bg-blue-600 px-4 py-1 text-lg text-white"
+                onclick="document.getElementById('dialog').showModal();">Login</button>
+        </div>
+    </header>
+
+    <dialog id="dialog" class="border-2 border-black bg-white p-6 text-black rounded-xl">
+        <form method="dialog" class="flex flex-col text-center">
+            <h2 class="text-xl font-bold">Login</h2>
+            <div>
+                <label for="Email" class="float-left">Email:</label><br />
+                <input class="w-full bg-blue-200 py-2 rounded-md shadow-xl px-2 focus:outline-none" type="text" />
+            </div>
+            <div class="mt-2">
+                <label for="password" class="float-left">Password:</label><br />
+                <input class="w-full bg-blue-200 py-2 rounded-md shadow-xl px-2 focus:outline-none" type="text" />
+            </div>
+            <button type="submit" class="bg-green-500 px-4 py-1 rounded-md text-white mt-6 font-bold">Login</button>
+        </form>
+    </dialog>
+
+</body>
+
+</html>
