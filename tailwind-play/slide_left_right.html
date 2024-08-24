@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="flex items-center justify-center h-screen">
+        <div class="p-2 border-4 w-56 border-pink-700 cursor-pointer">
+            <div class=" border-black border-l-8 p-4 slider transition-transform"></div>
+        </div>
+    </div>
+
+    <style>
+        @keyframes slide {
+
+            from {
+                transform: translateX(0%)
+            }
+
+            to {
+
+                transform: translateX(calc(100% - 8px))
+            }
+
+        }
+
+        @keyframes slide2 {
+
+            from {
+                transform: translateX(calc(100% - 8px))
+            }
+
+            to {
+                transform: translateX(0%)
+            }
+
+        }
+
+        .slider:hover {
+            animation: slide 1s linear forwards;
+        }
+
+        .slider:not(:hover) {
+            animation: slide2 1s linear;
+        }
+    </style>
+</body>
+
+</html>
