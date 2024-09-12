@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpine.js and Tailwind CSS Menu</title>
+    <script src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.x.x/dist/tailwind.min.css" rel="stylesheet">
+</head>
+
+<body class="flex items-center justify-center min-h-screen bg-gray-100">
+    <div x-data="{ open: false }" class="relative">
+        <button @click="open = !open" class="px-4 py-2 text-white bg-blue-500 rounded">
+            Toggle Menu
+        </button>
+        <div x-show="open" x-transition:enter="transition ease-out duration-300"
+            x-transition:enter-start="opacity-0 transform -translate-y-4"
+            x-transition:enter-end="opacity-100 transform translate-y-0"
+            x-transition:leave="transition ease-in duration-300"
+            x-transition:leave-start="opacity-100 transform translate-y-0"
+            x-transition:leave-end="opacity-0 transform -translate-y-4"
+            class="absolute left-0 w-full mt-2 bg-white border border-gray-200 rounded shadow-lg">
+            <ul class="py-2">
+                <li class="px-4 py-2 hover:bg-gray-100">Menu Item 1</li>
+                <li class="px-4 py-2 hover:bg-gray-100">Menu Item 2</li>
+                <li class="px-4 py-2 hover:bg-gray-100">Menu Item 3</li>
+            </ul>
+        </div>
+    </div>
+</body>
+
+</html>
